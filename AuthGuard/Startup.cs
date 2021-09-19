@@ -59,7 +59,7 @@ namespace AuthGuard
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, DataContext context)
         {
-            context.Users.Add(new User { Name = "DefaultClient", UserName = "ClientName", Password = "ClientPassword", ClientSecret = "client_1 icin secret degeri default olarak verildi" });
+            context.Users.Add(new User { Id = 1, Name = "DefaultClient", UserName = "ClientName", Password = "ClientPassword", ClientSecret = "client_1 icin secret degeri default olarak verildi" });
             context.SaveChanges();
 
             app.UseRouting();
